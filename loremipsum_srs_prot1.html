@@ -1,0 +1,442 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html style="direction: ltr;" lang="hu">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SRS dokumentum</title>
+    <style type="text/css">
+      body {
+        background-image: linear-gradient(to top right, rgb(30, 0, 10), rgb(40, 0, 10), rgb(50, 0, 10), rgb(120, 0, 10), rgb(50, 50, 60), rgb(40, 40, 50), rgb(30, 30, 40));
+        color: rgb(255, 255, 255);
+        font-family: 'Trebuchet MS', sans-serif;
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      #NT {
+        float: right;
+        margin: 0 0 4em 15px;
+      }
+
+      .ol {
+        margin-bottom: 0.5em;
+        font-size: 20 !important;
+      }
+
+      ol {
+        list-style-type: upper-roman;
+        margin-left: 10px;
+      }
+
+      ol.low {
+        list-style-type: lower-roman;
+      }
+
+      a:link {
+        color: rgb(220, 180, 0);
+      }
+
+      a:visited {
+        color: rgb(140, 100, 0);
+      }
+
+      p.title {
+        text-align: center;
+        font-size: 28;
+        font-weight: bold;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      #ttj {
+        margin-left: auto !important;
+        color: rgb(220, 180, 0);
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      td,
+      th {
+        border-color: inherit;
+        border-style: solid;
+        border-width: 1px;
+        font-size: 16px;
+        padding: 15px 10px;
+      }
+
+      th {
+        background-color: rgba(30, 30, 30, 0.5);
+      }
+
+      td {
+        background-color: rgba(50, 50, 50, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="https://i.imgur.com/ReOAgvS.png" alt="Nagy Testvér" height="50%" id="NT">
+    <p class="title">Szoftvertechnológia beadandó</p>
+    <p class="title">Nagy Testvér Szeme és Füle</p>
+    <h2 style="margin-bottom: 20px;"> Tartalomjegyzék</h2>
+    <div>
+      <ol id="ttj">
+        <li class="ol">
+          <a href="#1">Bevezetés</a>
+        </li>
+        <li class="ol">
+          <a href="#2">Áttekintés</a>
+        </li>
+        <li class="ol">
+          <a href="#3">A rendszer funkciói</a>
+        </li>
+        <ol class="low">
+          <li class="ol">
+            <a href="#31">Az érintettek összefoglalása</a>
+          </li>
+          <li class="ol">
+            <a href="#32">A felhasználók összefoglalása</a>
+          </li>
+          <li class="ol">
+            <a href="#33">Felhasználói környezet</a>
+          </li>
+        </ol>
+        <li class="ol">
+          <a href="#4">Használhatóság</a>
+        </li>
+        <li class="ol">
+          <a href="#5">Megbízhatóság</a>
+        </li>
+        <li class="ol">
+          <a href="#6">Teljesítmény</a>
+        </li>
+        <li class="ol">
+          <a href="#7">Támogatottság</a>
+        </li>
+        <li class="ol">
+          <a href="#8">Tervezési korlátozások</a>
+        </li>
+        <li class="ol">
+          <a href="#9">Online dokumentáció és Help rendszer</a>
+        </li>
+        <li class="ol">
+          <a href="#10">Felhasznált kész komponensek</a>
+        </li>
+        <li class="ol">
+          <a href="#11">Interfészek</a>
+        </li>
+        <li class="ol">
+          <a href="#12">Alkalmazott szabványok</a>
+        </li>
+        <li class="ol">
+          <a href="#13">Szótár</a>
+        </li>
+      </ol>
+    </div>
+    <ol>
+      <!-- Nagy ordered list, az egészet átfedi -->
+	<h1>
+        <li>
+          <a name="1">Bevezetés</a>
+      </h1>
+      <p> A programcsomag fő témája az egyén magánélete lesz, illetve annak nyilvánosságra hozatala egy telefonos applikációval összekötött közösségi oldalon keresztül. Előre le kell szögezni, hogy habár egyes részleteket a valóélet inspirált, az egész rendszer kizárólag egy ideális környezetben működhet. Alapvetően egy olyan programcsoportról van szó, amely teljesen megfosztja az embert a magánéletétől. Ezt az illető telefonjának figyelésével valósítja meg a következőképpen: mikrofonját bekapcsolva tartja, illetve fényképeket készít megfelelő időközönként, majd ezeket -beleértve a böngészési előzményeket, illetve a felvett telefonbeszélgetéseket és az üzeneteket- elküldi egy központba, ahol egy dolgozó kvázi kiértékeli. Ezek után pedig, amennyiben nem felel meg a kritériumoknak, csökkenti a társadalmi pontszámát. Ellenkező esetben marad egy szinten. Abban az esetben, ha kisebb bűnt követett el aznap (pl.: lopott, hazudott), a dolgozó posztolhatja egy erre kitalált közösségi portálon, amihez minden ember hozzáfér. Ők esetlegesen lejjebb vihetik a kiposztolt emberek pontjainak számát. Ezen pontok alapján működik az oktatási rendszer, élelmezés, stb. Komolyabb szabálysértés esetén a rendőrség avatkozik be. </p>
+      </li>
+      <h1>
+        <li>
+          <a name="2">Áttekintés</a>
+      </h1>
+      <p>A felhasználó telefonjának folyamatos lefigyelése valósul meg a következőképpen: mikrofonját bekapcsolva tartja, illetve fényképeket készít megfelelő időközönként, majd ezeket -belevéve a böngészési előzményeket, illetve a felvett telefonbeszélgetéseket és az üzeneteket- elküldi egy központba, ahol egy dolgozó kvázi kiértékeli. Ezek után pedig, amennyiben nem felel meg a kritériumoknak, csökkenti a társadalmi pontszámát. Ellenkező esetben marad egy szinten.</p>
+      <h1>
+        <li>
+          <a name="3">A rendszer funkciói</a>
+      </h1>
+      <p>Az érintettek és felhasználók a következők: a NagyTestvér, az Archívum, az Adminisztrátor és a Felvigyázó. Felhasználónak tekinthetjük [NagyTestvért], illetve az adminisztrátort, azon kívül a [felvigyázót]. Ők olyan szerepet fognak betölteni, amit egy átlag felhasználó nem tehet meg. <br>Felhasználónak tekinthetjük az alanyokat, akikről el lesz tárolva az információ az Archívumban. </p>
+      </li>
+      <ol class="low">
+        <h3>
+          <li>
+            <a name="31">Az érintettek összefoglalása</a>
+        </h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Elnevezés</th>
+              <th>Leírás</th>
+              <th>Szerep</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NagyTestvér</td>
+              <td>Információt gyűjt, értékeli ki, [bufferbe] rakja. Önellátó mindaddig, amíg az Archívum meg nem telik.</td>
+              <td>Ha az Archívum visszajelez, hogy kicsi a tárhelye, [NagyTestvér] ezt jelzi az Adminisztrátor felé.</td>
+            </tr>
+            <tr>
+              <td>Archívum</td>
+              <td>Adatokat tárol. Egy változtatható méretű adatbázis. A megrendelőtől és [NagyTestvértől] függ a mérete.</td>
+              <td>Minden felvett alany összes adata benne van elraktározva. Először a bufferbe kerülnek az adatok, majd magába az Archívumba.</td>
+            </tr>
+            <tr>
+              <td>Adminisztrátor</td>
+              <td>Karbantartja a rendszert hardver szinten. Segít a Felvigyázónak megvalósítani a kéréseit.</td>
+              <td>A megvalósításhoz szükséges hardvert kicseréli, pl: nagyobb tárhelyet biztosít az Archívum számára.</td>
+            </tr>
+            <tr>
+              <td>Felvigyázó</td>
+              <td>A tulajdonos. Mindenhez jogosultsága van, kivéve [NagyTestvér] hozzáféréséhez.</td>
+              <td>Szabadon választhat kivel, mit csinál és ebben az Adminisztrátor segíti.</td>
+            </tr>
+          </tbody>
+        </table>
+        </li>
+        <h3>
+          <li>
+            <a name="32"></a>A felhasználók összefoglalása
+        </h3>
+        <table style="width: 100%;">
+          <thead>
+            <tr>
+              <th>Elnevezés</th>
+              <th>Leírás</th>
+              <th>Illetékes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NagyTestvér</td>
+              <td>Propagandáért felelős.</td>
+              <td>Híreket terjeszt kisebb, vagy nagyobb eltéréssel a valóságtól.</td>
+            </tr>
+            <tr>
+              <td>Alany</td>
+              <td>Gyűjtőnév felhasználók számára</td>
+              <td>Értékel másokat, rangtól függően különböző funkciókat ér el, ezen kívül a midennapi életére is kihat.</td>
+            </tr>
+          </tbody>
+        </table>
+        </li>
+        <h3>
+          <li>
+            <a name="33">Felhasználói környezet</a>
+        </h3>
+        <ul>
+          <li>Java platformon fog futni a mobilalklmazás</li>
+          <li>A közösségi oldal böngésző alapú lesz</li>
+          <li>NagyTestvér szintén java platformon fog futni</li>
+        </ul>
+        <p>Mivel változó mennyiségű alannyal számolunk, így viszonylag nehéz konkrét számot mondani, viszont vegyünk például egy tíz millió fős országot: körülbelül egyszerre maximum a harmada, erősen kerekítve tehát négy millió felhasználó egyidejű tevékenykedését engedhetjük magunknak. Amennyiben ez nem elég az Adminisztrátor mozgosíthat tartalék forrásokat, további egy millió felhasználó számára. <br>Maximálisan egyszerre nyolc millió fő várható jelen példánkban. Minél több országban terjed el a kötelező használata, annál nagyobb lesz a forrásigényünk. </p>
+        <p>Átlagos alkalmazáson belül töltött idő maximum egy óra lesz. Teljesen felesleges annál több időt tölteni, mert az a tényleges munka rovására megy.</p>
+        <p>Az alkalmazáscsoport lehetőleg minél univerzálisabb lesz. Ez azt jelenti, hogy próbáljuk a fejlesztést úgy megoldani, hogy az minél platformfüggetlenebb legyen, illetve ne kívánjon különleges, erre a célra készített hardver eszközöket.</p>
+        </li>
+      </ol>
+      <h1>
+        <li>
+          <a name="4">Használhatóság</a>
+      </h1>
+ <p>
+A telefon az applikáció nélkül nem használható, ezzel kötelezve az állampolgárokat a használatra.
+         </p>
+      <ol class="low">
+        <h3>
+          <li>
+            <a name="41">A termék használatának előnyei</a>
+        </h3>
+        <ul>
+          <li>
+            <p>Abban az esetben, ha kisebb bűnt követett el aznap (pl.: lopott, hazudott), a dolgozó posztolhatja egy erre kitalált közösségi portálon, amihez minden ember hozzáfér. Ők esetlegesen lejjebb vihetik a kiposztolt emberek pontjainak számát. Ez fordított esetben (pl.: jó cselekedet) is igaz.</p>
+          </li>
+          <li>
+            <p>Fejlődésre ösztönzi az embereket, hogy egyre magasabb pontszámot érjenek el, ezáltal az alkalmazást sűrűbben használják, nagyobb a megtekintés és az értékelésekből is sok adat gyűjthető le. (további fejlesztési lehetőségek, reklámok beépítése stb…)</p>
+          </li>
+          <li>
+            <p>Végig lehet követni a felhasználó napjait, életét. Minden képernyőkép, hangfelvétel elkészítésével egyre jobban kialakul a jellemrajza az alanynak. </p>
+          </li>
+          <li>
+            <p>Az adatok rendszerezése után szűrések, lekérdezések indíthatók. (például meg lehet keresni a hasonló karaktereket)</p>
+          </li>
+          <li>
+            <p>Mivel privát, nagy mennyiségű adatot tárol széleskörű felhasználást biztosít a tulajdonos, adminisztrátorok számára. (további értékesítés stb…)</p>
+          </li>
+          <li>
+            <p>A felhasználó fontosnak érezheti magát, mert megkapja azt a látszatot, hogy a másik embert értékelheti. Cserébe viszont személyes adatokat szolgáltat, szinte észrevétlenül. </p>
+          </li>
+        </ul>
+        <p>Abban az esetben, ha kisebb bűnt követett el aznap (pl.: lopott, hazudott), a dolgozó posztolhatja egy erre kitalált közösségi portálon, amihez minden ember hozzáfér. Ők esetlegesen lejjebb vihetik a kiposztolt emberek pontjainak számát. Ez fordított esetben (pl.: jó cselekedet) is igaz.</p>
+        </li>
+        <h3>
+          <li>
+            <a name="42">Társadalmi szintek a termékben</a>
+        </h3>
+        <p>Ezen osztályok alapján működik az oktatási rendszer, bérezés, élelmezés, stb...Egy osztályt nem a jövedelem, vagy az életesélyekhez való hozzáállása határozza meg, hanem a társadalomban betöltött szerepe. Az ember attól függően tartozik egyik vagy másik osztályba, hogy birtokolja-e azokat az eszközöket, amelyekkel magasabb pontszámot tud elérni a ranglétrán. Hogy melyik csoportba tartozol, alapvetően meghatározza, hogy milyen szerepet fogsz betölteni a társadalomban, hogyan fogsz élni és milyen kilátásaid vannak.</p>
+        <p>A legkevesebb (0-20) pontot kapó személyek helyezkednek el az „F” osztályban, a „D”-ben helyet foglalók 20-40 pontszámúak, a „C” osztály a 40-60 pont közöttiek osztálya. A legtöbb pontot kapó személyek a „B” (60-80 pont) és az „A” (80-100 pont) csoportba tartoznak. Ha valaki elért például az „A” csoportba, az nem azt jelenti, hogy oda fog tartozni mindig. A magaviselete és a szavazatot leadók befolyásolhatják az értéket, így az alany folyamatosan ösztönözve van a fejlődésre. </p>
+        <table>
+          <thead>
+            <th>Osztály Neve</th>
+            <th>Pontok</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>"A" Osztály </td>
+              <td>80-100</td>
+            </tr>
+            <tr>
+              <td>"B" Osztály</td>
+              <td>60-80</td>
+            </tr>
+            <tr>
+              <td>"C" Osztály</td>
+              <td>40-60</td>
+            </tr>
+            <tr>
+              <td>"D" Osztály</td>
+              <td>20-40</td>
+            </tr>
+            <tr>
+              <td>"F" Osztály</td>
+              <td>0-20</td>
+            </tr>
+          </tbody>
+        </table>
+        </li>
+        <h3>
+          <li>
+            <a name="43">Költségbecslés</a>
+        </h3>
+        <p>Az applikáció Költségvetésének finanszírozása, az adófizetők pénzéből történik. A személyi jövedelemadó a magánszemélyekre a jövedelmük alapján kivetett adó, a magasabb jövedelemhez magasabb adókulcs tartozik. 2021-ben ennek az előirányzott értéke: 2 683 500 millió forint volt, így ha csak 1 %-át erre elkülönítjük, az az érték elegendő éves szinten a fenntartásra. </p>
+        </li>
+
+       
+        
+        </li>
+      </ol>
+      <h1>
+        <li>
+          <a name="5">Megbízhatóság</a>
+     <p>
+        <picture> 
+        <img src="https://static.wikia.nocookie.net/minecraft/images/3/3e/MissingTextureBlock.png/revision/latest?cb=20200101220309" width="50" height="50" title="Missing?">
+        </picture> 
+     </p>
+        </li>
+      </h1>
+
+      <h1>
+        <li>
+          <a name="6">Teljesítmény</a>
+      </h1>
+      <ul>
+        <li>
+          <p>Könnyű kezelhetőség. A használati utasítás elolvasása után bárki könnyen tudja használni.</p>
+        </li>
+        <li>
+          <p>Magas biztonság. A rendszerünk egy vagy több elemének szempontjából vizsgált állapot, amelyből a rendszer stabilitására vonhatunk le következtetéseket. Később, a veszélyforrások és a kockázatok vizsgálata során meghatározhatjuk a rendszer kritikus elemét vagy elemeit, hiszen az azokban bekövetkező változások eseményeket vagy rendkívüli eseményeket generálhatnak. </p>
+        </li>
+        <li>
+          <p>Inputok megfelelő működése.</p>
+        </li>
+      </ul>
+      </li>
+      <h1>
+        <li>
+          <a name="7">Támogatottság</a>
+      </h1>
+      <ul>
+        <li>
+          <p>A társadalom összes tagjának szükséges egy mobil eszköz. Világunkban már elképzelhetetlen, hogy valaki nincsen „fenn a világhálón” és nem rendelkezik mobiltelefonnal. Ez egy olyan kiinduló pont, amire lehet építeni a rendszer kialakítása során. </p>
+        </li>
+        <li>
+          <p>Megfelelő adatbázisra van szükség.</p>
+        </li>
+        <li>
+          <p>[NagyTestvérnek] szükséges van viszonylag nagy számítókapacitásra, így -alanyok számától függően- akár egészen hatalmas teljesítményű rendszeren kell futnia.</p>
+        </li>
+      </ul>
+      </li>
+      <h1>
+        <li>
+          <a name="8">Tervezési korlátozások</a>
+      </h1>
+      <ul>
+        <li>
+          <p>Adat lopás/Adat hamisítás.  Az adatvédelmi incidens akkor következik be, amikor biztonsági incidens éri az adatokat, amelyekért a program felel, melynek eredményeképpen sérül a titoktartási kötelezettség, a hozzáférhetőség vagy az integritás.</p>
+        </li>
+        <li>
+          <p>Kifutás az időből. Nem marad elegendő idő a körülményeket kiértékelve teljesen kidolgozni és átadni az alkalmazást a tervezett időpontig. </p>
+        </li>
+        <li>
+          <p>Társadalmi reakció. A program bevezetése - nevezhetjük szankciónak-, a társadalmi ellenőrzés egy eszköze. Hatóereje az egyén félelmében van, hogy a közösségi kapcsolatokból kirekesztve érzi magát, vagy túlzott ellenőrzés alatt tartják.</p>
+        </li>
+        <li>
+          <p>Fejlesztések elmaradása. Nem lehetséges a fejlesztés abban az ütemben, ahogy azt a felhasználók, a használók, és a kiértékelők azt elvárnák.</p>
+        </li>
+      </ul>
+      </li>
+       <h1>
+            <li>
+          <a name="9">Online dokumentáció és Help rendszer</a>
+     <p>
+        <picture> 
+        <img src="https://static.wikia.nocookie.net/minecraft/images/3/3e/MissingTextureBlock.png/revision/latest?cb=20200101220309" width="50" height="50" title="Missing?">
+        </picture> 
+     </p>
+            </li>
+      </h1>
+       <h1>
+            <li>
+          <a name="10">Felhasznált kész komponensek</a>
+     <p>
+        <picture> 
+        <img src="https://static.wikia.nocookie.net/minecraft/images/3/3e/MissingTextureBlock.png/revision/latest?cb=20200101220309" width="50" height="50" title="Missing?">
+        </picture> 
+     </p>
+            </li>
+      </h1>
+       <h1>
+            <li>
+          <a name="11">Interfészek</a>
+     <p>
+        <picture> 
+        <img src="https://static.wikia.nocookie.net/minecraft/images/3/3e/MissingTextureBlock.png/revision/latest?cb=20200101220309" width="50" height="50" title="Missing?">
+        </picture> 
+     </p>
+            </li>
+      </h1>
+       <h1>
+            <li>
+          <a name="12">Alkalmazott szabványok</a>
+     <p>
+        <picture> 
+        <img src="https://static.wikia.nocookie.net/minecraft/images/3/3e/MissingTextureBlock.png/revision/latest?cb=20200101220309" width="50" height="50" title="Missing?">
+        </picture> 
+     </p>
+            </li>
+      </h1>
+      <h1>
+        <li>
+          <a name="13">Szótár</a>
+      </h1>
+      <ul style="list-style-type: none;">
+        <li>
+          <p>Diktátor : A diktátor olyan politikai vezető, aki abszolút hatalommal rendelkezik. Önkényuralmat gyakorló személy, aki egy állam élén áll. Jellemzője, hogy csak az ő politikai akarta érvényesülhet és korlátlan hatalma van. Parancsok kiadása útján egy személyben kormányoz, az ellene fellépőket erőszakkal elhallgattatja, eltávolítja, akár meg is öleti.</p>
+        </li>
+        <li>
+          <p>Disztópia : A disztópia (negatív utópia, antiutópia, ellenutópia) valamilyen, a jelenleginél rosszabb világ/társadalom víziója. Az utópia negatív változata.</p>
+        </li>
+        <li>
+          <p>Szankció: A társadalom reakciója az egyén fontos helyzetekben tanúsított magatartására.</p>
+        </li>
+        <li>
+          <p>Anonimitás: Névtelenség, név nélküliség.</p>
+        </li>
+        <li>
+          <p>NagyTestvér: Mesterséges Intelligencia. Nagy mennyiségű adat átdolgozására lett kitalálva. Központi számítógépének helye szigorúan titkos.</p>
+        </li>
+      </ul>
+      </li>
+    </ol>
+  </body>
+</html>
